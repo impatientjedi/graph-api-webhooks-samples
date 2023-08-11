@@ -58,7 +58,7 @@ app.post('/instagram', function(req, res) {
   received_updates.unshift(req.body);
   res.sendStatus(200);
   xhub.fire(req.body, {
-    url: "http://hooks.wearpanda.com/c_mgr.php"
+    url: "http://hooks.wearpanda.com/listener.php"
   });
 });
 
