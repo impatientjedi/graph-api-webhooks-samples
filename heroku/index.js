@@ -57,6 +57,11 @@ app.post('/instagram', function(req, res) {
   // Process the Instagram updates here
   received_updates.unshift(req.body);
   res.sendStatus(200);
+  xhub.fire(req.body, {
+    url: "http://hooks.wearpanda.com/c_mgr.php"
+  });
 });
+
+
 
 app.listen();
